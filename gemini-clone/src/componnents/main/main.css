@@ -1,0 +1,312 @@
+.main {
+
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 90px; /* ارتفاع تقریبی سرچ */
+    position: relative;
+    
+}
+
+
+.main .nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 22px;
+padding: 20px;
+color: #cbcbcb;
+
+}
+
+.main .nav img {
+
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+.main-container {
+    
+    max-width: 900px;
+    margin: auto;
+    margin-top: -50px;
+
+}
+
+
+.main-container .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c4c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet {
+    margin: 50px;
+    font-size: 56px;
+    color: #c4c4c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg , #4b90ff , #FF5546);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr)) ;
+    gap: 15px;
+    padding: 20px ;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #9a9a9a;
+    border-radius: 10px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+
+.main .card img {
+ width: 35px;
+ padding: 5px;
+ position: absolute;
+ background: rgb(214, 214, 214);
+ border-radius: 20px;
+ bottom: 10px;
+ right: 10px;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.main .card p{
+
+    color: #000000;
+    font-size: 17px;
+}
+
+
+.main .card:hover{
+ background-color: #f8f8f8;
+ transition: 0.5s;
+}
+
+main.bottom{
+    position: fixed;   /* همیشه ثابت بمونه */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: rgba(0,0,0,0.15) 0px -2px 8px;
+    z-index: 1000; /* بالاتر از همه */
+}
+
+
+.searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color:#F0F4F9 ;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+
+.searchbox img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.main-bottom .searchbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color:#919191;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.main-bottom .searchbox input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 18px;
+    flex: 1;
+    
+    
+}
+
+
+.searchbox div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+
+.main-bottom-info{
+ font-size: 5px;
+}
+
+.result {
+    padding: 0 5%;
+    max-height: 60vh;
+    overflow-y: scroll;
+   color: #959595;
+   margin-bottom: 17vh;
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result-title {
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.result img { 
+
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.loader hr {
+
+    border-radius: 4px;
+    border: none;
+    background-color: #F0F4F9;
+    background: linear-gradient(to right , #9ed7ff , #ffffff , #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+
+}
+
+@keyframes loader {
+
+    0%{
+        background-position: -800px;
+    }
+
+
+        100%{
+        background-position: 800px;
+    }
+}
+
+
+body {
+    max-height: 90vh;
+}
+
+
+.main-bottom .bottom-info {
+    color: #ffffff;
+}
+
+::placeholder{
+    color: #000;
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+
+@media (max-width:600px) {
+    .main-bottom input {
+        flex: none;
+        width: 150px ;
+    }
+
+    .main-bottom img { 
+        width: 20px;
+    }
+
+    .searchbox {
+        padding: 5px 10px;
+    }
+
+    .bottom-info{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+    }
+}
+
+
+
+.image-preview-small {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  background: #a3a3a3; /* رنگ روشن مشابه کارت GPT */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* سایه نرم */
+  max-width: 110px; /* حداکثر عرض برای کارت */
+}
+
+.image-preview-small img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-preview-small button {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center;
+  padding: 0;
+}
+
+#w {
+    font-size: 20px;
+    margin-top: 10px;
+}
